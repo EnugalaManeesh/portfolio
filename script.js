@@ -5,7 +5,6 @@ function toggleMenu() {
     icon.classList.toggle("open");
   }
 
-  // Function to handle scroll and highlight active section
 function highlightActiveSection() {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-links li a");
