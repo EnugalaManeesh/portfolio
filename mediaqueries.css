@@ -101,3 +101,34 @@
       text-align: justify;
     }
   }
+  /* Mobile responsiveness: spacing, buttons, nav */
+@media (max-width: 600px) {
+  section {
+    padding: 40px 16px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  .button, .btn, .nav-link {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .card, .experience-box, .project-card {
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+
+  .nav-menu {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -97,5 +97,12 @@ function toggleMenu() {
   const menu = document.querySelector('.menu-links');
   menu.classList.toggle('active'); // Add or remove class for showing/hiding the menu
 }
+// Auto-close menu on link click (for mobile)
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-menu').classList.remove('active');
+  });
+});
+
 
 
