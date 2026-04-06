@@ -1,190 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Enugala Maneesh Reddy, a fresher in Python Fullstack development." />
-    <meta name="keywords" content="Enugala Maneesh Reddy, portfolio, Python Fullstack, web development, fresher" />
-    <title>Responsive Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Enugala Maneesh Reddy, Python Fullstack Developer & AI/ML Enthusiast." />
+    <meta name="keywords" content="Maneesh Reddy, portfolio, developer, AI ML, fullstack" />
+    <title>Maneesh Reddy | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
 </head>
+
 <body>
-    <header>
-        <nav id="desktop-nav">
-            <div class="logo">Enugala Maneesh Reddy</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <nav id="hamburger-nav">
-            <div class="logo">Enugala Maneesh Reddy</div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#projects"onclick="toggleMenu()">projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+
+    <!-- NAVIGATION -->
+    <header id="header">
+        <nav class="navbar container">
+            <a href="#" class="logo">Maneesh.</a>
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </nav>
     </header>
 
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
     <main>
-        <section id="profile">
-            <div class="section__pic-container">
-                <img src="myimage.jpg" alt="Profile picture" />
-            </div>
-            <div class="section__text">
-                <p class="section__text__p1">Hello, I'm</p>
-                <h1 class="title">Enugala Maneesh Reddy</h1>
-                <p class="section__text__p2">Fresher</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2" type="button" onclick="window.open('Maneesh_resume.pdf')">Download CV</button>
-                    <button class="btn btn-color-1" type="button" onclick="location.href='#contact'">Contact Info</button>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero section container reveal">
+            <div class="hero-content">
+                <p class="hero-subtitle">Hello, I'm</p>
+                <h1 class="hero-title">Enugala Maneesh Reddy</h1>
+                <h2 class="hero-description">Full Stack Developer & AI/ML Enthusiast</h2>
+
+                <div class="hero-buttons">
+                    <a href="Maneesh_resume.pdf" target="_blank" class="btn btn-primary">Download CV</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
-                <div id="socials-container">
-                    <img src="linkedin.png" alt="LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/maneesh-enugala-1a23a82a0/'">
-                    <img src="github.png" alt="GitHub profile" class="icon" onclick="location.href='https://github.com/EnugalaManeesh'">
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/maneesh-enugala-1a23a82a0/" target="_blank"
+                        class="social-link">
+                        <img src="linkedin.png" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="https://github.com/EnugalaManeesh" target="_blank" class="social-link">
+                        <img src="github.png" alt="GitHub" class="social-icon">
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <!-- Using the user's uploaded image if available, else fallback to existing -->
+                <img src="myimage.jpg" alt="Maneesh Reddy" class="hero-img">
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about section container reveal">
+            <p class="section-subtitle">Get To Know More</p>
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="profile1.jpg" alt="About Me" class="about-img">
+                </div>
+
+                <div class="about-data">
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <img src="experience.png" alt="Experience" class="about-card-icon">
+                            <h3 class="about-card-title">Experience</h3>
+                            <p class="about-card-description">Full Stack Developer<br>AI/ML Enthusiast</p>
+                        </div>
+                        <div class="about-card">
+                            <img src="education.png" alt="Education" class="about-card-icon">
+                            <h3 class="about-card-title">Education</h3>
+                            <p class="about-card-description">MSDS, IIIT Hyderabad<br>B.Tech CSE, KITS</p>
+                        </div>
+                    </div>
+
+                    <p class="about-description">
+                        I am a passionate developer skilled in Full Stack Development and Machine Learning.
+                        I enjoy creating modern interfaces, efficient backend systems, and AI-driven applications that
+                        solve real-world problems.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="about">
-            <p class="section__text__p1">Get To Know More</p>
-            <h1 class="title">About Me</h1>
-            <div class="section-container">
-                <div class="section__pic-container">
-                    <img src="profile1.jpg" alt="Profile picture" class="about-pic" />
-                </div>
-                <div class="about-details-container">
-                    <div class="about-containers">
-                        <div class="details-container">
-                            <img src="experience.png" alt="Experience icon" class="icon" />
-                            <h3>Experience</h3>
-                            <p>Fresher <br />Python Fullstack</p>
-                        </div>
-                        <div class="details-container">
-                            <img src="education.png" alt="Education icon" class="icon" />
-                            <h3>Education</h3>
-                            <p>SSC <br /> Alphores School of Gen-next.</p>
-                            <p>Intermediate <br /> Narayana Junior College.</p>
-                            <p>B.Tech <br /> Kamala Institute of Technology and Science.</p>
-                        </div>
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="experience section container reveal">
+            <p class="section-subtitle">Explore My</p>
+            <h2 class="section-title">Skills</h2>
+
+            <div class="experience-container">
+                <div class="experience-box">
+                    <h3 class="experience-category">Frontend Development</h3>
+                    <div class="experience-content">
+                        <article class="experience-item">
+                            <img src="experience.png" class="experience-icon" alt="check">
+                            <div>
+                                <h4 class="experience-name">HTML</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+                        <article class="experience-item">
+                            <img src="experience.png" class="experience-icon" alt="check">
+                            <div>
+                                <h4 class="experience-name">CSS</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+                        <article class="experience-item">
+                            <img src="experience.png" class="experience-icon" alt="check">
+                            <div>
+                                <h4 class="experience-name">JavaScript</h4>
+                                <small class="text-light">Intermediate</small>
+                            </div>
+                        </article>
+                        <article class="experience-item">
+                            <img src="experience.png" class="experience-icon" alt="check">
+                            <div>
+                                <h4 class="experience-name">React.js</h4>
+                                <small class="text-light">Intermediate</small>
+                            </div>
+                        </article>
                     </div>
-                    <div class="text-container">
-                        <p>
-                            My Name is Enugala Maneesh Reddy, 
-                            I am a recent graduate with a Bachelor's degree in Computer Science and Engineering
-                            from Kamala Institute of Technology and Science, Singapur, Huzurabad.
-                            Affiliated with Jawaharlal Nehru Technology University, Hyderabad.
+                </div>
+
+                <div class="experience-box">
+                    <h3 class="experience-category">Backend Development</h3>
+                    <div class="experience-content">
+                        <article class="experience-item">
+                            <img src="experience.png" class="experience-icon" alt="check">
+                            <div>
+                                <h4 class="experience-name">Python</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+                        <article class="experience-item">
+                            <img src="experience.png" class="experience-icon" alt="check">
+                            <div>
+                                <h4 class="experience-name">SQL</h4>
+                                <small class="text-light">Intermediate</small>
+                            </div>
+                        </article>
+                        <!-- Add more backend skills if needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK EXPERIENCE SECTION -->
+        <section id="experience" class="section container reveal">
+            <p class="section-subtitle">My Journey</p>
+            <h2 class="section-title">Work Experience</h2>
+
+            <div class="work-container">
+                <div class="work-card">
+                    <div class="work-content">
+                        <div class="work-header">
+                            <h3 class="work-title">Data Science Intern</h3>
+                            <span class="work-company">Codveda Technologies</span>
+                        </div>
+                        <p class="work-description">
+                            Gained hands-on experience in data analysis, machine learning model development, and data
+                            visualization.
+                            Collaborated with cross-functional teams to deliver data-driven solutions.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience">
-            <p class="section__text__p1">Explore My</p>
-            <h1 class="title">Experience</h1>
-            <div class="experience-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <h2 class="experience-sub-title">Frontend Development</h2>
-                        <div class="article-container">
-                            <article>
-                                <img src="experience.png" alt="HTML icon" class="icon">
-                                <h3>HTML</h3>
-                            </article>
-                            <article>
-                                <img src="experience.png" alt="CSS icon" class="icon">
-                                <h3>CSS</h3>
-                            </article>
-                            <article>
-                                <img src="experience.png" alt="JavaScript icon" class="icon">
-                                <h3>JavaScript</h3>
-                            </article>
-                            <article>
-                                <img src="experience.png" alt="React.js icon" class="icon">
-                                <h3>React.js</h3>
-                            </article>
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects section container reveal">
+            <p class="section-subtitle">Browse My Recent</p>
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="tarffic.jpg" alt="Traffic Sign Detection" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Traffic Sign Detection</h3>
+                        <p class="project-desc">Deep Learning + OpenCV-based real-time sign classifier.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/EnugalaManeesh/traffic-sign-detection" target="_blank"
+                                class="btn btn-secondary project-btn">Github</a>>
+                            <!-- Add Live Demo if available -->
                         </div>
                     </div>
-                    <div class="details-container">
-                        <h2 class="experience-sub-title">Backend Development</h2>
-                        <div class="article-container">
-                            <article>
-                                <img src="experience.png" alt="SQL icon" class="icon">
-                                <h3>SQL</h3>
-                            </article>
-                            <article>
-                                <img src="experience.png" alt="Python icon" class="icon">
-                                <h3>Python</h3>
-                            </article>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="emotion.jpg" alt="Emotion Music Player" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Emotion Music Player</h3>
+                        <p class="project-desc">Detects user emotions and recommends songs accordingly.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/EnugalaManeesh/emotion-music-player" target="_blank"
+                                class="btn btn-secondary project-btn">Github</a>>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="student.jpg" alt="Student Management" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Student Management</h3>
+                        <p class="project-desc">Flask-based CRUD application with secure authentication.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/EnugalaManeesh/student-management-system" target="_blank"
+                                class="btn btn-secondary project-btn">Github</a>>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="foodcourt.jpg" alt="Food Court System" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Food Court System</h3>
+                        <p class="project-desc">Backend system for menu, billing & order management.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/EnugalaManeesh/food-court-management-system" target="_blank"
+                                class="btn btn-secondary project-btn">Github</a>>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="product.jpeg" alt="Product Platform" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Product Platform</h3>
+                        <p class="project-desc">Role-based dashboard with CRUD operations & analytics.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/EnugalaManeesh/product-management-platform" target="_blank"
+                                class="btn btn-secondary project-btn">Github</a>>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="projects">
-  <p class="section__text__p1">Explore My</p>
-  <h1 class="title">Projects</h1>
-  <div class="project-cards">
-    <div class="project-card">
-      <img src="Traffic-Signal-detection.png" alt="Traffic Sign Detection" class="project-icon" />
-      <h3>Traffic Sign Detection</h3>
-      <p>Deep Learning + OpenCV-based system to classify traffic signs in real time.</p>
-    </div>
-    <div class="project-card">
-      <img src="emotion.jpg" alt="Emotion Music Player" class="project-icon" />
-      <h3>Emotion-Based Music Player</h3>
-      <p>Detects user emotions using webcam and plays songs accordingly.</p>
-    </div>
-    <div class="project-card">
-      <img src="student.jpg" alt="Student Management System" class="project-icon" />
-      <h3>Student Management System</h3>
-      <p>Flask-based CRUD web app for managing student records efficiently.</p>
-    </div>
 
-        <section id="contact">
-            <p class="section__text__p1">Get in Touch</p>
-            <h1 class="title">Contact Me</h1>
-            <div class="contact-info-upper-container">
-                <div class="contact-info-container">
-                    <img src="email.png" alt="Email icon" class="icon email-icon">
-                    <p><a href="mailto:maneeshreddyenugala@gmail.com">Email</a></p>
-                </div>
-                <div class="contact-info-container">
-                    <img src="linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
-                    <p><a href="https://www.linkedin.com/in/maneesh-enugala-1a23a82a0/">LinkedIn</a></p> 
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact section container reveal">
+            <p class="section-subtitle">Get in Touch</p>
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <img src="email.png" alt="Email" class="contact-icon">
+                        <h3 class="contact-card-title">Email</h3>
+                        <a href="mailto:maneeshreddyenugala@gmail.com" class="contact-button">Write me <i
+                                class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+
+                    <div class="contact-card">
+                        <img src="linkedin.png" alt="LinkedIn" class="contact-icon">
+                        <h3 class="contact-card-title">LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/maneesh-enugala-1a23a82a0/" target="_blank"
+                            class="contact-button">Connect <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="projects">projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container container">
+            <ul class="footer-list">
+                <li><a href="#about" class="footer-link">About</a></li>
+                <li><a href="#skills" class="footer-link">Skills</a></li>
+                <li><a href="#experience" class="footer-link">Experience</a></li>
+                <li><a href="#projects" class="footer-link">Projects</a></li>
+            </ul>
+
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/maneesh-enugala-1a23a82a0/" target="_blank"
+                    class="footer-social-link">
+                    <img src="linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/EnugalaManeesh" target="_blank" class="footer-social-link">
+                    <img src="github.png" alt="GitHub">
+                </a>
             </div>
-            <p>© 2024 Enugala Maneesh Reddy. All Rights Reserved.</p>
-        </nav>
+
+            <span class="footer-copy">
+                &#169; 2024 Enugala Maneesh Reddy. All rights reserved.
+            </span>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
